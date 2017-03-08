@@ -1,0 +1,31 @@
+
+[1mFrom:[0m /home/merylkdakin-48124/code/labs/collections_practice_vol_2-web-031317/collections_practice.rb @ line 89 Object#organize_schools:
+
+    [1;34m67[0m: [32mdef[0m [1;34morganize_schools[0m(data)
+    [1;34m68[0m:   organized_schools = {}
+    [1;34m69[0m:   location_hashes = data.values
+    [1;34m70[0m:   cities_arr = location_hashes.collect [32mdo[0m |loc|
+    [1;34m71[0m:     loc[[33m:location[0m]
+    [1;34m72[0m:   [32mend[0m
+    [1;34m73[0m:   unique_cities = cities_arr.uniq
+    [1;34m74[0m:   unique_cities.each [32mdo[0m |city|
+    [1;34m75[0m:     organized_schools[city] = {}
+    [1;34m76[0m: 
+    [1;34m77[0m:   [32mend[0m
+    [1;34m78[0m:   organized_schools [1;34m#now looks like {"NYC" = {}, "SF" = {}, "Chi" = {}}[0m
+    [1;34m79[0m:   data.keys.each [32mdo[0m |school|
+    [1;34m80[0m:     data[school].each [32mdo[0m |loc_key, loc_data|
+    [1;34m81[0m:       organized_schools.each [32mdo[0m |city_key, schools_arr|
+    [1;34m82[0m:         [32mif[0m loc_data == city_key
+    [1;34m83[0m:           schools_arr = []
+    [1;34m84[0m:           schools_arr.push(school)
+    [1;34m85[0m:         [32mend[0m
+    [1;34m86[0m:       [32mend[0m
+    [1;34m87[0m:     [32mend[0m
+    [1;34m88[0m:   [32mend[0m
+ => [1;34m89[0m:   binding.pry
+    [1;34m90[0m:   organized_schools
+    [1;34m91[0m: 
+    [1;34m92[0m: 
+    [1;34m93[0m: [32mend[0m
+
